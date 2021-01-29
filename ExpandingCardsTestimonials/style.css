@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&display=swap');
+
+.container {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: beige;
+  border-radius: 20px;
+  margin: 0 10px;
+  height: 30vh;
+  padding: 7px;
+  flex: .1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: flex .4s ease-in;
+  border: none;
+}
+
+.card .testimonial,
+.card .testimonyBy,
+.card .occupation {
+  opacity: 0;
+}
+
+.card.active {
+  flex: 1;
+}
+
+.card.active .testimonial,
+.card.active .testimonyBy,
+.card.active .occupation {
+  opacity: 1;
+  transition: opacity .5s ease-in .4s;  
+}
